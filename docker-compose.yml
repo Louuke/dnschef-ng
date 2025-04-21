@@ -10,7 +10,7 @@ services:
       - ./dnschef.toml:/etc/dnschef.toml
     environment:
       - INTERFACE=0.0.0.0
-      - NAMESERVERS=8.8.8.8
+      - NAMESERVERS=["8.8.8.8"]
       - PORT=53
       - TCP=false
       - IPV6=false
