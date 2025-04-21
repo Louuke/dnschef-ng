@@ -50,5 +50,5 @@ jobs:
           file: Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/dnschef-ng:${{ steps.extract_version.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/dnschef-ng:v${{ steps.extract_version.outputs.version }}
             ghcr.io/${{ github.repository_owner }}/dnschef-ng:latest
