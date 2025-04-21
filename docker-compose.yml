@@ -1,11 +1,9 @@
-version: "3"
 services:
   dnschef:
-    image: dnschef:latest
+    image: dnschef-ng:latest
     container_name: dnschef
     ports:
-      - "53:53/udp"
-      - "53:53/tcp"
+      - "127.0.0.1:53:53"
     expose:
       - "80"
     volumes:
