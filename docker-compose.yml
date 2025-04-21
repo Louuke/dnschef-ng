@@ -1,11 +1,11 @@
 services:
   dnschef:
-    image: dnschef-ng:latest
-    container_name: dnschef
+    image: ghcr.io/louuke/dnschef-ng:latest
+    container_name: dnschef-ng
     ports:
       - "127.0.0.1:53:53"
     expose:
-      - "80"
+      - 80
     volumes:
       - ./dnschef.toml:/etc/dnschef.toml
     environment:
