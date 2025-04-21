@@ -3,7 +3,7 @@ services:
     image: ghcr.io/louuke/dnschef-ng:latest
     container_name: dnschef-ng
     ports:
-      - "127.0.0.1:53:53"
+      - "127.0.0.1:53:53/udp"
     expose:
       - 80
     volumes:
