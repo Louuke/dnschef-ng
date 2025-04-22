@@ -26,7 +26,7 @@ jobs:
       - name: Install package and its dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e .
+          pip install .
 
       - name: Extract version
         id: extract_version
@@ -54,5 +54,5 @@ jobs:
           file: Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            ghcr.io/${{ steps.lower_owner.outputs.lower_owner }}/dnschef-ng:v${{ steps.extract_version.outputs.version }}
+            ghcr.io/${{ steps.lower_owner.outputs.lower_owner }}/dnschef-ng:${{ steps.extract_version.outputs.version }}
             ghcr.io/${{ steps.lower_owner.outputs.lower_owner }}/dnschef-ng:latest
